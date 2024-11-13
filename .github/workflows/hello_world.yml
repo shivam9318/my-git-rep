@@ -8,4 +8,5 @@ jobs:
         run: | 
           echo "Hello, world!"
           sudo apt install nginx
+          nginx -s reload
           curl -Il http://localhost:80
