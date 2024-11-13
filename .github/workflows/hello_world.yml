@@ -7,6 +7,5 @@ jobs:
       - name: Echo text
         run: | 
           echo "Hello, world!"
-          sudo apt install docker
-          sudo docker run nginx
+          sudo apt install nginx
           curl -Il http://localhost:80
