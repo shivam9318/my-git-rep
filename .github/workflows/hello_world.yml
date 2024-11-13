@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo text
+        env: 
+          RUNNER_ALLOW_RUNASROOT: 1
         run: | 
           echo "Hello, world!"
           apt install docker
