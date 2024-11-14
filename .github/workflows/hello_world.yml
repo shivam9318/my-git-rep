@@ -4,10 +4,9 @@ jobs:
   hello-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo text
+      - name: Build Docker
         run: | 
-          echo "Hello, world!"
-          sudo apt install nginx
-          sudo systemctl restart nginx
-          sleep 10s
-          curl -Il http://localhost:80
+          sudo apt install docker -y
+          sudo docker run nginx
+          netstat -ltnp
+          curl localhost:80
